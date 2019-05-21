@@ -16,6 +16,19 @@ npm run server
 
 3. Add your Data.re file
 
-4. Render a list of the place names
+4. Render a list of the place names using <li> tags. Use the `place.id`. Get inspired by the following hints:
 
-5. Optional pro lesson: Render other place properties
+```
+["Vienna", "London", "Paris"]
+    ->Belt.List.map(city => React.string(city))
+    ->Belt.List.toArray
+    ->React.array
+```
+
+```
+[|"Vienna", "London", "Paris"|]
+    ->Belt.List.map(city => React.string(city))
+    ->React.array
+```
+
+5. Optional bonus exercise: Render other place properties
