@@ -13,4 +13,4 @@ switch (phone) {
 
 2. Render the phone (which is not always in the list)
 
-3. Optional pro lesson: Extract Phone to be a separate component and pass phone data as a prop
+3. Optional bonus exercise: Extract Phone to be a separate component and pass phone data as a prop
