@@ -75,7 +75,7 @@ let places = [
 ];
 
 let names = Belt.List.map(places, place => place.name);
-let namesArray = Array.of_list(names)
+let namesArray = Belt.List.toArray(names)
 
 Js.log(namesArray);
 
