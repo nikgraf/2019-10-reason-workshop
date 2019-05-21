@@ -5,7 +5,7 @@ Create a file Data.re and inside create a list of places with the following prop
 - id (generate uuids via https://www.uuidgenerator.net/ and copy & paste them in your code)
 - name
 - description
-- image containing an url, attribution and attributionUrl (optional)
+- image containing an url, attribution and an optional attributionUrl
 - address
 - phone (optional)
 - email (optional)
