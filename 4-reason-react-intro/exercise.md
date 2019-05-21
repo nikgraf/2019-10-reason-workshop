@@ -27,7 +27,7 @@ npm run server
 
 ```
 [|"Vienna", "London", "Paris"|]
-    ->Belt.List.map(city => React.string(city))
+    ->Belt.Array.map(city => React.string(city))
     ->React.array
 ```
 
