@@ -1,26 +1,17 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const outputDir = path.join(__dirname, 'build/');
-
-const isProd = process.env.NODE_ENV === 'production';
+const path = require("path");
 
 module.exports = {
-  entry: './src/Index.bs.js',
-  mode: isProd ? 'production' : 'development',
+  entry: "./src/Index.bs.js",
+  mode: "development",
   output: {
-    path: outputDir,
-    filename: 'Index.js'
+    path: path.join(__dirname, "bundleOutput"),
+    filename: "index.js"
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: false
-    })
-  ],
   devServer: {
-    compress: true,
-    contentBase: outputDir,
-    port: process.env.PORT || 8000,
+    index: "index.html",
+    port: 8000,
+    contentBase: __dirname,
+    writeToDisk: true, // so contentBase and output.path can be different
     historyApiFallback: true
   }
 };

@@ -9,8 +9,6 @@ npm install -g bs-platform
 bsb -init my-react-app -theme react-hooks
 cd my-react-app && npm install && npm start
 # in another tab
-npm run webpack
-# in another tab
 npm run server
 ```
 
@@ -27,7 +25,7 @@ npm run server
 
 ```
 [|"Vienna", "London", "Paris"|]
-    ->Belt.Array.map(city => React.string(city))
+    ->Belt.List.map(city => React.string(city))
     ->React.array
 ```
 

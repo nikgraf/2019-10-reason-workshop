@@ -1,21 +1,22 @@
 {
-  "name": "react-hooks-template",
+  "name": "reason-react-examples",
   "reason": {
     "react-jsx": 3
   },
   "sources": {
-    "dir": "src",
-    "subdirs": true
+    "dir" : "src",
+    "subdirs" : true
   },
-  "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": true
-    }
-  ],
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["reason-react", "bs-emotion"],
-  "refmt": 3,
-  "ppx-flags": ["bs-emotion-ppx/ppx"]
+  "bs-dependencies": [
+    "reason-react",
+    "bs-css"
+  ],
+  "refmt": 3
 }

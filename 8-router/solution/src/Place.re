@@ -1,44 +1,56 @@
 module Styles = {
-  open Emotion;
+  open Css;
 
-  let wrapper = [%css
-    [margin(`auto), maxWidth(`px(632)), margin3(`rem(1.), `auto, `zero)]
-  ];
+  let wrapper =
+    style([
+      margin(auto),
+      maxWidth(px(632)),
+      margin3(~top=rem(1.), ~h=auto, ~bottom=zero),
+    ]);
 
-  let nav = [%css
-    [
-      textAlign(`center),
-      display(`block),
-      margin3(`rem(4.), `zero, `rem(2.)),
-      color(`hex("000")),
-      fontSize(`rem(0.6)),
-    ]
-  ];
+  let nav =
+    style([
+      textAlign(center),
+      display(block),
+      margin3(~top=rem(4.), ~h=zero, ~bottom=rem(2.)),
+      color(hex("000")),
+      fontSize(rem(0.6)),
+    ]);
 
-  let headline = [%css
-    [textAlign(`center), margin3(`rem(4.), `zero, `rem(2.))]
-  ];
+  let headline =
+    style([
+      textAlign(center),
+      margin3(~top=rem(4.), ~h=zero, ~bottom=rem(2.)),
+    ]);
 
-  let preview = [%css
-    [
-      width(`px(632)),
-      height(`px(280)),
-      borderRadius(`px(6)),
-      marginBottom(`rem(1.)),
+  let preview =
+    style([
+      width(px(632)),
+      height(px(280)),
+      borderRadius(px(6)),
+      marginBottom(rem(1.)),
       boxShadows([
-        (`px(0), `px(2), `px(4), `px(0), `rgba((0, 0, 0, 0.2)), false),
+        Shadow.box(
+          ~x=px(0),
+          ~y=px(2),
+          ~blur=px(4),
+          ~spread=px(0),
+          ~inset=false,
+          rgba(0, 0, 0, 0.2),
+        ),
       ]),
-      backgroundSize(`cover),
-      backgroundPosition(`keywords((`center, `center))),
-      position(`relative),
-    ]
-  ];
+      backgroundSize(cover),
+      backgroundPosition(
+        Types.Percentage.pct(50.),
+        Types.Percentage.pct(50.),
+      ),
+      position(relative),
+    ]);
 
-  let attribution = [%css
-    [display(`block), fontSize(`rem(0.5)), color(`hex("000"))]
-  ];
+  let attribution =
+    style([display(block), fontSize(rem(0.5)), color(hex("000"))]);
 
-  let description = [%css [color(`hex("333")), fontSize(`rem(0.8))]];
+  let description = style([color(hex("333")), fontSize(rem(0.8))]);
 };
 
 [@react.component]

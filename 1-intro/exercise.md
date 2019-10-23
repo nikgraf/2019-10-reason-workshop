@@ -11,8 +11,8 @@ Put your data-structures in action by storing 2 chess figures in a collection ca
 - Figure 1: Black, King, on position A1
 - Figure 2: White, Tower, on position C7
 
-I recommend to use the playground for this example: https://reasonml.github.io/en/try
+I recommend to use this playground for this example: https://sketch.sh/
+Alternative playground: https://reasonml.github.io/en/try
 
-Alternative playground: https://sketch.sh/
-
-Tip: You may use lists, arrays, tuples, variants for these tasks
+**Hint**: You may use lists, arrays, tuples, variants for these tasks
+**Hint**: The position can designed in various ways e.g. a tuple of int or Variants. Keep in mind a Variant has to start with an upper case non-digit character.

@@ -1,9 +1,11 @@
 module Styles = {
-  open Emotion;
+  open Css;
 
-  let headline = [%css
-    [textAlign(`center), margin3(`rem(4.), `zero, `rem(2.))]
-  ];
+  let headline =
+    style([
+      textAlign(center),
+      margin3(~top=rem(4.), ~h=zero, ~bottom=rem(2.)),
+    ]);
 };
 
 [@react.component]

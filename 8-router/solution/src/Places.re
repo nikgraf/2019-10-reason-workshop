@@ -1,64 +1,73 @@
 module Styles = {
-  open Emotion;
+  open Css;
 
-  let list = [%css
-    [margin(`auto), maxWidth(`px(632)), margin3(`rem(1.), `auto, `zero)]
-  ];
+  let list =
+    style([
+      margin(auto),
+      maxWidth(px(632)),
+      margin3(~top=rem(1.), ~h=auto, ~bottom=zero),
+    ]);
 
-  let preview = [%css
-    [
-      width(`px(632)),
-      height(`px(280)),
-      borderRadius(`px(6)),
-      marginBottom(`rem(1.)),
+  let preview =
+    style([
+      width(px(632)),
+      height(px(280)),
+      borderRadius(px(6)),
+      marginBottom(rem(1.)),
       boxShadows([
-        (`px(0), `px(2), `px(4), `px(0), `rgba((0, 0, 0, 0.2)), false),
-        (
-          `px(0),
-          `px(0),
-          `px(0),
-          `px(2000),
-          `rgba((255, 255, 255, 0.4)),
-          true,
+        Shadow.box(
+          ~x=px(0),
+          ~y=px(2),
+          ~blur=px(4),
+          ~spread=px(0),
+          ~inset=false,
+          rgba(0, 0, 0, 0.2),
+        ),
+        Shadow.box(
+          ~x=px(0),
+          ~y=px(0),
+          ~blur=px(0),
+          ~spread=px(2000),
+          ~inset=true,
+          rgba(255, 255, 255, 0.4),
         ),
       ]),
-      backgroundSize(`cover),
-      backgroundPosition(`keywords((`center, `center))),
-      position(`relative),
-    ]
-  ];
+      backgroundSize(cover),
+      backgroundPosition(
+        Types.Percentage.pct(50.),
+        Types.Percentage.pct(50.),
+      ),
+      position(relative),
+    ]);
 
-  let headline = [%css [fontSize(`rem(1.5))]];
+  let headline = style([fontSize(rem(1.5))]);
 
-  let link = [%css [textDecoration(`none), color(`hex("000"))]];
+  let link = style([textDecoration(none), color(hex("000"))]);
 
-  let content = [%css [padding(`rem(1.))]];
+  let content = style([padding(rem(1.))]);
 
-  let description = [%css
-    [whiteSpace(`nowrap), overflow(`hidden), textOverflow(`ellipsis)]
-  ];
+  let description =
+    style([whiteSpace(nowrap), overflow(hidden), textOverflow(ellipsis)]);
 
-  let attribution = [%css
-    [
-      display(`block),
-      fontSize(`rem(0.4)),
-      color(`hex("000")),
-      marginTop(`rem(2.5)),
-    ]
-  ];
+  let attribution =
+    style([
+      display(block),
+      fontSize(rem(0.4)),
+      color(hex("000")),
+      marginTop(rem(2.5)),
+    ]);
 
-  let filterInput = [%css
-    [
-      fontSize(`rem(0.8)),
-      boxSizing(`borderBox),
-      display(`block),
-      width(`px(632)),
-      padding2(`rem(0.4), `rem(0.4)),
-      borderRadius(`px(6)),
-      margin(`auto),
-      border(`px(1), `solid, `hex("ccc")),
-    ]
-  ];
+  let filterInput =
+    style([
+      fontSize(rem(0.8)),
+      boxSizing(borderBox),
+      display(block),
+      width(px(632)),
+      padding2(~v=rem(0.4), ~h=rem(0.4)),
+      borderRadius(px(6)),
+      margin(auto),
+      border(px(1), solid, hex("ccc")),
+    ]);
 };
 
 [@react.component]

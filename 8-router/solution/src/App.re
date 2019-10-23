@@ -1,18 +1,19 @@
 module Styles = {
-  open Emotion;
+  open Css;
 
-  let headline = [%css
-    [textAlign(`center), margin3(`rem(4.), `zero, `rem(2.))]
-  ];
+  let headline =
+    style([
+      textAlign(center),
+      margin3(~top=rem(4.), ~h=zero, ~bottom=rem(2.)),
+    ]);
 
-  let footer = [%css
-    [
-      color(`hex("666")),
-      fontSize(`rem(0.6)),
-      textAlign(`center),
-      margin3(`rem(3.), `zero, `rem(2.)),
-    ]
-  ];
+  let footer =
+    style([
+      color(hex("666")),
+      fontSize(rem(0.6)),
+      textAlign(center),
+      margin3(~top=rem(3.), ~h=zero, ~bottom=rem(2.)),
+    ]);
 };
 
 type route =
