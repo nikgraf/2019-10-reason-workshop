@@ -16,7 +16,7 @@ Alternative playground: https://reasonml.github.io/en/try
 Alternatively compile and run a script without a project
 
 ```sh
-bsc Data.re >> Data.js && node Data.js
+bsc Data.re > Data.js && node Data.js
 ```
 
 Retrieve the type definitions of a file using the BuckleScript compiler
