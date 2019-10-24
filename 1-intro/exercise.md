@@ -13,6 +13,17 @@ Put your data-structures in action by storing 2 chess figures in a collection ca
 
 I recommend to use this playground for this example: https://sketch.sh/
 Alternative playground: https://reasonml.github.io/en/try
+Alternatively compile and run a script without a project
+
+```sh
+bsc Data.re >> Data.js && node Data.js
+```
+
+Retrieve the type definitions of a file using the BuckleScript compiler
+
+```sh
+bsc -i Data.re
+```
 
 **Hint**: You may use lists, arrays, tuples, variants for these tasks
 **Hint**: The position can designed in various ways e.g. a tuple of int or Variants. Keep in mind a Variant has to start with an upper case non-digit character.
